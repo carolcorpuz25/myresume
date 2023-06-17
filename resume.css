@@ -1,0 +1,126 @@
+.background {
+        position: fixed;
+        width: 3000px;
+        height: 3000px;
+      }
+      .overlay {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+
+      .inside-modal {
+        background-color: rgba(39, 39, 39, 0.5);
+        width: 250px;
+        height: 800px;
+        padding-top: 30px;
+      }
+
+      .modal {
+        background-color: rgba(66, 96, 97, 0.5);
+        width: 1000px;
+        height: 700px;
+        border-radius: 5px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .picture {
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+        margin-left: 75px;
+        border-radius: 50px;
+      }
+
+      .name {
+        color: rgb(215, 244, 245);
+        font-family: "times";
+        font-size: 30px;
+        margin-left: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .contact,
+      .skills-title {
+        font-size: 25px;
+        color:  rgba(89, 233, 252, 0.815);
+        font-weight: bold;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 18px;
+      }
+
+      .email-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(74, 122, 122, 0.5);
+      }
+
+      .phone-container {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: rgba(74, 122, 122, 0.5);
+        margin-top: 5px;
+      }
+
+      .home-container {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-color: rgba(74, 122, 122, 0.5);
+        margin-top: 5px;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:start;
+      }
+
+      .skills {
+        background-color: rgba(61, 223, 223, 0.5);
+        color: white;
+        border: 0;
+        margin-bottom: 5px;
+
+      }
+
+      .email-icon {
+        background-color: rgba(12, 204, 230, 0.432);
+        object-fit: cover;
+        width: 25px;
+        height: 25px;
+      }
+
+      .phone-icon,
+      .home-icon {
+        object-fit: cover;
+        width: 25px;
+        height: 25px;
+        margin-left: 12px;
+        border-radius: 15px;
+      }
+
+      .email,
+      .phone-number,
+      .home-address {
+        font-family: Times;
+        font-size: 15px;
+        color: white;
+        margin-left: 5px;
+        margin-right: 30px;
+      }
