@@ -1,14 +1,69 @@
-.background {
-        position: fixed;
-        width: 3000px;
-        height: 3000px;
+      .body {
+       height: 1000px;
+       width: 1000px;
+       margin: 0;
+      
       }
-      .overlay {
+
+      @media all and (max-width:1000px) {
+        .body{
+         height: 1000px;
+         width: 1000px;
+        }
+      }
+
+      @media (orientation: portrait) {
+        body {
+          height: 1000px;
+          width: 1000px;
+        }
+      }
+
+      .modal {
+        background-color: rgba(66, 96, 97, 0.5);
+        width: 1000px;
+        height: 1000px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 2fr;
+      }
+
+      .leftside-modal {
+        position: relative;
+        background-color: rgba(27, 28, 29, 0.5);
+        width: 250px;
+        height: 1000px;
+        margin-bottom: 60px;
+      }
+
+      .rightside-modal {
+        position: relative;
+        background-color: rgba(22, 23, 24, 0.5);
+        width: 700px;
+        height: 990px;
+        margin-right: 17px;
+        margin-bottom: 55px;
+        padding-left: 15px;
+      
+      }
+
+      .background {
         position: fixed;
+      }
+
+      .background-picture {
+        object-fit: cover;
+        height: 1000px;
+        width: 2000px;
+      }
+      
+      .overlay {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
         background-color: rgba(0, 0, 0, 0.5);
         top: 0;
         bottom: 0;
@@ -16,30 +71,13 @@
         left: 0;
       }
 
-      .inside-modal {
-        background-color: rgba(39, 39, 39, 0.5);
-        width: 250px;
-        height: 800px;
-        padding-top: 30px;
-      }
-
-      .modal {
-        background-color: rgba(66, 96, 97, 0.5);
-        width: 1000px;
-        height: 700px;
-        border-radius: 5px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
       .picture {
         object-fit: cover;
         width: 100px;
         height: 100px;
-        margin-left: 75px;
         border-radius: 50px;
+        margin-top: 50px;
+        margin-left: 70px;
       }
 
       .name {
@@ -47,25 +85,45 @@
         font-family: "times";
         font-size: 30px;
         margin-left: 30px;
-        padding-left: 5px;
-        padding-right: 5px;
       }
 
-      .contact,
-      .skills-title {
+      .contact {
         font-size: 25px;
         color:  rgba(89, 233, 252, 0.815);
         font-weight: bold;
+        margin-top: 20px;
         margin-left: 10px;
         margin-bottom: 10px;
-        margin-top: 18px;
+      }
+
+      .skills-title,
+      .personal-background {
+        font-size: 25px;
+        color:  rgba(89, 233, 252, 0.815);
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-bottom: 15px;
       }
 
       .email-container {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         background-color: rgba(74, 122, 122, 0.5);
+        width: 250px;
+      }
+
+      .email-container:hover {
+        background-color: rgba(108, 185, 185, 0.5);
+      }
+
+      .email-icon {
+        background-color: rgba(12, 204, 230, 0.432);
+        object-fit: cover;
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
       }
 
       .phone-container {
@@ -74,14 +132,42 @@
         align-items: center;
         background-color: rgba(74, 122, 122, 0.5);
         margin-top: 5px;
+        width: 250px;
       }
 
-      .home-container {
+      .phone-container:hover {
+        background-color: rgba(108, 185, 185, 0.5);
+      }
+
+      .phone-icon {
+        object-fit: cover;
+        width: 27px;
+        height: 27px;
+        margin-left: 10px;
+        border-radius: 15px;
+      }
+
+      .github-container {
         display: flex;
         justify-content: left;
         align-items: center;
         background-color: rgba(74, 122, 122, 0.5);
         margin-top: 5px;
+        padding-top: 5px;
+        width: 250px;
+      }
+
+      .github-container:hover {
+        background-color: rgba(108, 185, 185, 0.5);
+      }
+
+      .github-logo {
+        object-fit: cover;
+        width: 27px;
+        height: 27px;
+        margin-left: 12px;
+        border-radius: 15px;
+        margin-bottom: 3px;
       }
 
       .skills-container {
@@ -89,38 +175,334 @@
         flex-direction: column;
         justify-content: center;
         align-items:start;
+        margin-left: 8px;
       }
 
-      .skills {
-        background-color: rgba(61, 223, 223, 0.5);
-        color: white;
-        border: 0;
-        margin-bottom: 5px;
-
+      .exel-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
       }
 
-      .email-icon {
-        background-color: rgba(12, 204, 230, 0.432);
-        object-fit: cover;
-        width: 25px;
-        height: 25px;
-      }
-
-      .phone-icon,
-      .home-icon {
-        object-fit: cover;
-        width: 25px;
-        height: 25px;
-        margin-left: 12px;
-        border-radius: 15px;
-      }
-
-      .email,
-      .phone-number,
-      .home-address {
+      .email {
         font-family: Times;
-        font-size: 15px;
+        font-size: 17px;
+        color: white;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 30px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
+
+      .phone-number {
+        font-family: Times;
+        font-size: 17px;
         color: white;
         margin-left: 5px;
         margin-right: 30px;
       }
+      
+      .github {
+        font-family: Times;
+        font-size: 17px;
+        color: white;
+        margin-left: 5px;
+        margin-right: 30px;
+        padding-top: 7px;
+        padding-bottom: 11px;
+      }
+
+      .exel {
+        font-family: Times;
+        background-color: rgba(61, 223, 223, 0.5);
+        color: white;
+        border-radius: 9px;
+        font-size: 17px;
+        border: 0;
+        margin-bottom: 5px;
+        padding: 4px;
+        cursor: pointer;
+        transition: 0.40s;
+      }
+
+      .exel:hover {
+        padding-right: 100px;
+        background-color: rgb(63, 168, 209);
+      }
+
+      .msword {
+        font-family: Times;
+        background-color: rgba(61, 223, 223, 0.5);
+        color: white;
+        border-radius: 9px;
+        font-size: 17px;
+        border: 0;
+        margin-bottom: 5px;
+        padding: 4px;
+        cursor: pointer;
+        transition: 0.40s;
+      }
+
+      .msword:hover {
+        padding-right: 110px;
+        background-color: rgb(47, 134, 168);
+      }
+
+      .powerpoint {
+        font-family: Times;
+        background-color: rgba(61, 223, 223, 0.5);
+        color: white;
+        border-radius: 9px;
+        font-size: 17px;
+        border: 0;
+        margin-bottom: 5px;
+        padding: 4px;
+        cursor: pointer;
+        transition: 0.40s;
+      }
+
+      .powerpoint:hover {
+        padding-right: 80px;
+        background-color: rgb(33, 96, 121);
+      }
+
+      .html {
+        font-family: Times;
+        background-color: rgba(61, 223, 223, 0.5);
+        color: white;
+        border-radius: 9px;
+        font-size: 17px;
+        border: 0;
+        margin-bottom: 5px;
+        padding: 4px;
+        cursor: pointer;
+        transition: 0.40s;
+      }
+
+      .html:hover {
+        padding-right: 90px;
+        background-color: rgb(29, 81, 102);
+      }
+
+      .date-of-birth {
+        font-family: Times;
+        font-size: 17px;
+        background-color: rgba(74, 122, 122, 0.5);
+        color: white;
+        border-radius: 5px;
+        margin-right: 20px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+      }
+
+      .age {
+        font-family: Times;
+        font-size: 17px;
+        background-color: rgba(74, 122, 122, 0.5);
+        color: white;
+        border-radius: 5px;
+        margin-right: 120px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+      }
+
+      .civil-status {
+        font-family: Times;
+        font-size: 17px;
+        background-color: rgba(74, 122, 122, 0.5);
+        color: white;
+        border-radius: 5px;
+        margin-right: 90px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+      }
+
+      .citizenship {
+        font-family: Times;
+        font-size: 17px;
+        background-color: rgba(74, 122, 122, 0.5);
+        color: white;
+        border-radius: 5px;
+        margin-right: 80px;
+        padding: 3px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+      }
+
+      .height {
+        font-family: Times;
+        font-size: 17px;
+        background-color: rgba(74, 122, 122, 0.5);
+        color: white;
+        border-radius: 5px;
+        margin-right: 150px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+      }
+
+      .weight {
+        font-family: Times;
+        font-size: 17px;
+        background-color: rgba(74, 122, 122, 0.5);
+        color: white;
+        border-radius: 5px;
+        margin-right: 120px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        margin-left: 6px;
+      }
+
+      .about-me {
+        font-family: Times;
+        font-size: 30px;
+        background-color: rgb(101, 170, 196);
+        color: rgb(5, 12, 15);
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        width: 145px;
+        padding-left: 10px;
+      }
+
+      .about-me-content {
+        font-family: Times;
+        color: white;
+        font-size: 18px;
+        padding-left: 40px;
+        padding-bottom: 70px;
+        width: 200px;
+      }
+
+      .work {
+        font-family: Times;
+        font-size: 25px;
+        background-color: rgb(101, 170, 196);
+        color: rgb(5, 12, 15);
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        width: 200px;
+        padding-left: 10px;
+      }
+
+      .work-content {
+        font-family: Times;
+        color: white;
+        font-size: 18px;
+        margin-left: 40px;
+      }
+
+      .educational-background {
+        font-family: Times;
+        font-size: 25px;
+        background-color: rgb(101, 170, 196);
+        color: rgb(5, 12, 15);
+        font-weight: bold;
+        width: 270px;
+        margin-bottom: 10px;
+      }
+
+      .year-graduated {
+        display: inline-block;
+        width: 190px;
+        vertical-align: top;
+        margin-left: 70px;
+      }
+
+      .year {
+        font-family: Times;
+        color: rgb(132, 226, 233);
+        font-size: 20px;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+
+      .content {
+        display: inline-block;
+        width: 200px;
+      }
+
+      .course,
+      .school-name,
+      .school-address {
+        font-family: Times;
+        color: white;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .interest {
+        font-family: Times;
+        background-color: rgb(101, 170, 196);
+        color: rgb(5, 12, 15);
+        font-size: 25px;
+        font-weight: bold;
+        width: 90px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+        margin-left: 15px;
+      }
+
+      .about-interest {
+        width: 200px;
+        margin-left: 10px;
+        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .interest-container {
+        display: inline-block;
+        margin-left: 60px;
+        cursor: pointer;
+      }
+
+      .microphone-icon,
+      .photography-icon, 
+      .game-controller-icon {
+        width: 30px;
+        background-color: rgba(8, 214, 241, 0.541);
+        border-radius: 5px;
+      }
+
+      .microphone .tooltip,
+      .photography .tooltip,
+      .games .tooltip {
+        font-family: Times;
+        position: absolute;
+        background-color: rgba(76, 155, 165, 0.5);
+        color: white;
+        font-size: 15px;
+        padding: 4px;
+        border-radius: 3px;
+        opacity: 0;
+        transition: 0.30s;
+        pointer-events: none;
+      }
+
+      .interest-container:hover .tooltip {
+        opacity: 1;
+      }
+
+
+      
+    
+
+
+
+
+    
+
+      
